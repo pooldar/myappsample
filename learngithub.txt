@@ -1,0 +1,215 @@
+						
+eveything what you can read here it is just my own research how to start github it may be wrong but that helped me to get involed!!!
+
+
+
+
+						CONCEPTS OF GIT
+
+* Keeps track of code history
+* Takes "snapshots" of your files
+* You decide when to take a snapshot by making a "commit"
+* You can visit any snapshot at any time
+* YOu can stage files before committing 
+
+						BASIC COMMANDS
+
+. $ git init 			   //Initialize Local Git Repository
+. $ git add <file> 		  //Add File (s) To Index 
+. $ git status 			  //Check Status of working tree
+. $ git commit 			 //commit changes in Index
+. $ git push 			 //push to Remote Repository
+
+
+. $ git pull			//pull latest From Remote Repository
+. $ git clone			// clone Repository into A New Directory
+
+					
+						INSTALLING GIT
+
+Linux (Debian)
+
+$ sudo apt-get install git
+
+Linux (Fedora)
+
+$ sudo yum install git 
+
+Mac 
+
+http://git-scm.com/download/mac
+
+Windows
+
+http://git-scm.com/download/win
+
+
+
+when you install it before push the finish button have to uncheck the "view Release Notes" and check the "Lanuch Git Bash" button
+
+go create a project in a new folder you can rename it if you want it then push the left side on the mouse and open the folder in "Git Bash Here"
+
+type into "git --version" you can also use the command line cmd in your pc and type the same command "git --version"
+you will see it will work. 
+Click twice on the new folder to open it then use the git bash board that you already open it and type touch index.html in it you will see it appear in your new folder  
+and for the app.js you have to use the same command as you already used to create index.html
+type touch app.js it will appear in your new folder as well the two files are your applications
+use any text editor to  put the folder as your project open index.html app with standart html tag and save it 
+you can type $ git init in the "git Bash" if you do not see it in your folder go to view, options, change folder and search options, then in view
+check "Show hidden files,folder, and drivers" you can also uncheck "Hide extensions for known file types" type Apply then you can  see .git  appears in the folder
+next put your name before you want countinou type git config --global user.name 'Jon Trav' enter
+put your email 
+ $ git config --global user.email 'jon@gmail.com'
+now start to use it 
+$ git add index.html enter
+
+
+$ git status enter
+
+if you want to remove put $  git rm --cashed index.html enter
+type then  $ git status enter
+the file is untraked
+
+different way to add any html file 
+type $ git add *.html enter
+type $ git status enter
+get out the file again
+
+type $ git rm --cashed index.html enter
+now I am going to show you how to add everthing 
+
+ $ git add . enter
+
+$ git status enter
+you will see every file is add 
+
+try to change something in the index.html with your text editor then save it 
+
+go again in the git bash section type $ git status enter 
+
+ $ git commit enter
+
+it open another page it is liter bit confiosing 
+
+then you have to press letter i allowed  to write, and write initial commit
+to get out of there type :wq enter
+ 
+go into text editor app.js file put something there such as console.log('Hello'); save it 
+
+type on git bash $ git status you will see it is modified:   app.js
+  
+ $ git add . enter
+ 
+you can also skip the section with git commit if you want than do something like this following
+
+ $ git commit -m 'changed app.js' enter
+
+
+				HOW TO USE GIT IGNORE
+
+if you do not want to put in the Repository
+
+to create write in the  git bash section 
+
+ $ touch .gitignore
+the file will appear in the folder 
+create another one namely 
+
+ $ touch log.txt enter
+
+use text editor put in the log.txt something such as error logs save it 
+
+use text editor to put in there ignore  log.txt save it 
+
+type in the git bash $ git add . enter
+ $ git status enter
+
+you can see new file: .gitignore shows normaly have to shows the log.txt but we put .gitignore thatway
+
+create in the folder 2 new folders name it dir1 and dir2 in the text editor create
+inside dir1 and dir2 a new file app1.js enter for the sconde one app2.js enter
+inside the file put console.log(123); for both files save it 
+
+go to gitignore add just /dir2 save it 
+
+ go to git bash 
+$ git add . enter 
+$ git status enter
+
+you will see new file: .gitignore
+	     new file: dir1/app1.js
+
+the sconde dir2 does not appear 
+
+you can add in the text editor section gitignore *.txt it withdrow all text if want to 
+
+you can also create a branch something like login branch it is not in a master brani 
+so create just a branch $ git branch login enter but to do that is does not shows anything new 
+go  switch it $ git commit -m 'another change' enter
+$ git  checkout login enter
+now we are in login branch
+create new one  $ touch login.html enter
+put in the login.html something like login use text editor save it 
+add in the index.html like login Form save it 
+$ git add . enter
+$ git commit -m 'login form' enter
+
+now switch back to master 
+$ git checkout master enter
+now you can see the login.html is gone the reasen for that because it is in the login branch
+type $ git merge login enter
+
+type i to can write then type Added login do esc :wq enter
+now even in the master branch can see the login.html
+ go to github.com
+sign up a account it is for free 
+go to the right side where to see the plus sign press it chose the New repository
+
+create a name such as myappsample
+in description put for example sample for training chose the option public it is for free
+click create repository
+
+$ git remote enter 
+
+copy git remote add origin https://github.com/bradtraversy/myappsample.git it
+
+$ git remote enter
+copy $ git push -u origin master enter
+
+log in again in github account 
+now reloade the side you will see all you file in github side 
+type $ touch README.md enter
+
+use the text editor 
+put for example MyApp
+This is my app save it 
+
+$ git add . enter
+$ git commit -m 'Added readme' enter
+$ git push enter 
+
+then you will see it push in the github side 
+
+to clone chose or download the green button can just copy 
+
+
+create another folder you can call it myapp2
+open up git bash here 
+$ git clone paste here enter
+you will be able to get entiry applications in the new folder myapp2 
+
+if somebody did the change you can type 
+
+$ git pull 
+
+already up-to-date.
+
+
+
+
+
+
+
+
+
+
